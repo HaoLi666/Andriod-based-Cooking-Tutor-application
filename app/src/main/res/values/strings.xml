@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Cook Tutor</string>
+    <string name="title_activity_navi_bar">Navi_bar</string>
+    <string name="title_home">Home</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_chat">Chat</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="help">If you have any question or suggestion, just e-mail to hal918@lehigh.edu</string>
+</resources>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.addMenuActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Creating Menu"
+        android:textSize="22sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:text="Title: "
+            android:textSize="16sp"
+            />
+
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Enter ..."
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll1" >
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:text="Description: "
+            android:textSize="16sp"
+            />
+
+        <EditText
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Enter ..."
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll2">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:text="Detail steps: "
+            android:textSize="16sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp">
+
+            <EditText
+                android:id="@+id/intro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textLongMessage|textMultiLine"
+                android:hint="Enter ..."
+                android:textSize="16sp">
+            </EditText>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll3">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:hint="Select A Photo: "
+            android:textSize="16sp" />
+
+        <Button
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Single"
+            android:layout_marginLeft="8dp"
+            android:textSize="14sp"
+            android:text="Photos" />
+
+        <Button
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Camera"
+            android:layout_marginLeft="8dp"
+            android:textSize="14sp"
+            android:text="Camera" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll4">
+
+<!--        <com.facebook.drawee.view.SimpleDraweeView-->
+<!--            android:id="@+id/my_image_view"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp" />-->
+
+        <TextView
+            android:textAlignment="center"
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit_menu"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="32dp"
+        android:background="#008577"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:onClick="submit_menu"
+        android:text="SUBMIT"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
